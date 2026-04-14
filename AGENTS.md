@@ -74,7 +74,7 @@ Autonomously generates an extensive, in-depth quantum computing curriculum cover
 
 ### 1. **Create New Module**
 ```
-"Generate Module 3: Quantum Circuits
+"Generate Module 2: Quantum Circuits
 - Include gate decomposition theory
 - Add Yao.jl circuit construction examples
 - Create interactive circuit builder exercise"
