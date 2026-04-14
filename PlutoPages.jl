@@ -683,20 +683,47 @@ function template_handler(
 	
 	if Pluto.is_pluto_notebook(input.absolute_path)
 		temp_out = mktempdir()
-		Logging.with_logger(Logging.NullLogger()) do
-			PlutoSliderServer.export_notebook(
-				input.absolute_path;
-				Export_create_index=false,
-				Export_cache_dir=cache_dir,
-				Export_baked_state=false,
-				Export_baked_notebookfile=false,
-				Export_output_dir=temp_out,
+		try
+			Logging.with_logger(Logging.NullLogger()) do
+				PlutoSliderServer.export_notebook(
+					input.absolute_path;
+					Export_create_index=false,
+					Export_cache_dir=cache_dir,
+					Export_baked_state=false,
+					Export_baked_notebookfile=false,
+					Export_output_dir=temp_out,
+				)
+			end
+		catch e
+			@error "Failed to export notebook" path=input.relative_path exception=(e, catch_backtrace())
+			return TemplateOutput(;
+				contents = "<div class='error'>Failed to export notebook: $(repr(e))</div>",
+				search_index_data=prose_from_code(SafeString(input.contents)),
+				frontmatter=try Pluto.frontmatter(input.absolute_path) catch; Dict{String,Any}() end,
 			)
 		end
 		d = readdir(temp_out)
 
+		if isempty(d)
+			@error "No files generated from notebook export" path=input.relative_path
+			return TemplateOutput(;
+				contents = "<div class='error'>No files generated during notebook export</div>",
+				search_index_data=prose_from_code(SafeString(input.contents)),
+				frontmatter=try Pluto.frontmatter(input.absolute_path) catch; Dict{String,Any}() end,
+			)
+		end
+
 		statefile = find(contains("state") ∘ last ∘ splitext, d)
 		notebookfile = find(!contains("html") ∘ last ∘ splitext, d)
+
+		if isnothing(statefile) || isnothing(notebookfile)
+			@error "Missing exported notebook files" path=input.relative_path statefile notebookfile files=d
+			return TemplateOutput(;
+				contents = "<div class='error'>Failed to export notebook: missing files (state=$statefile, notebook=$notebookfile, files=$d)</div>",
+				search_index_data=prose_from_code(SafeString(input.contents)),
+				frontmatter=try Pluto.frontmatter(input.absolute_path) catch; Dict{String,Any}() end,
+			)
+		end
 
 		reg_s = register_asset(read(joinpath(temp_out, statefile)), statefile)
 		reg_n = register_asset(read(joinpath(temp_out, notebookfile)), notebookfile)
