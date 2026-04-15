@@ -137,7 +137,7 @@ $(pluto_head)
                         else
                             @htl("""<li class=$(class)><a href=$(href) title=$(desc)><span class="entry-number">Homework $(homework_number):</span> $(name)</a></li>""")
                         end
-                    end for other_page in get(collections, section_id, Collection(section_id, Page[])).pages
+                    end for other_page in get(collections, section_id, (pages=[],)).pages
                 ])
                 </ul>
                 </li>
