@@ -1,0 +1,19 @@
+[build]
+command = "julia --project -e 'using PlutoPages; PlutoPages.build()'"
+
+[build.environment]
+HUGO_VERSION = "0.80.0"
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
+
+[context.production]
+command = "julia --project -e 'using PlutoPages; PlutoPages.build(; minify=true)'"
+
+[context.deploy-preview]
+command = "julia --project -e 'using PlutoPages; PlutoPages.build()'"
+
+[context.branch-deploy]
+command = "julia --project -e 'using PlutoPages; PlutoPages.build()'"
