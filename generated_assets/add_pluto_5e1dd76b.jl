@@ -2,12 +2,12 @@
 # v0.19.25
 
 #> [frontmatter]
-#> chapter = 2
+#> chapter = 1
 #> section = 2
 #> order = 2
 #> image = "https://raw.githubusercontent.com/fonsp/Pluto.jl/580ab811f13d565cc81ebfa70ed36c84b125f55d/demo/plutodemo.gif"
 #> title = "Add Pluto notebooks"
-#> tags = ["module2", "track_julia", "track_material", "Pluto", "PlutoUI"]
+#> tags = ["module1", "track_julia", "track_material", "Pluto", "PlutoUI"]
 #> layout = "layout.jlhtml"
 
 using Markdown
