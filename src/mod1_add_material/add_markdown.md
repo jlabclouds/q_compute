@@ -1,7 +1,7 @@
 ---
 title: "Add markdown files"
 order: 1
-chapter: 2
+chapter: 1
 section: 1
 layout: "md.jlmd"
 tags: ["module1", "track_material", "markdown", "frontmatter"]
