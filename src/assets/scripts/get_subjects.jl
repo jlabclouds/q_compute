@@ -22,7 +22,7 @@ let
                     <h3>$(name)</h3>
                     <img src=$(image)>
                 </a>""")
-            end for other_page in collections[section_id].pages
+            end for other_page in get(collections, section_id, (pages=[],)).pages
         ])
         """)
         for (section_id, section_name) in sections
