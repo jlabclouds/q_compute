@@ -28,7 +28,7 @@ For each file, markdown or pluto, you will need to add a *front-matter*, which s
 ---
 title: "Add markdown file"
 order: 1
-chapter: 2
+chapter: 1
 section: 1
 layout: "md.jlmd"
 tags: ["module2", "track_material", "markdown", "frontmatter"]
