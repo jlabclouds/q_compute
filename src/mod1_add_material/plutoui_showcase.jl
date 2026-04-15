@@ -2,12 +2,12 @@
 # v0.19.25
 
 #> [frontmatter]
-#> chapter = "2"
+#> chapter = "1"
 #> image = "https://user-images.githubusercontent.com/6933510/174067690-50c8128d-748b-4f50-8a76-2ce18166642b.png"
 #> order = "3"
 #> section = "3"
 #> title = "PlutoUI showcase"
-#> tags = ["module2", "track_julia", "track_material", "Pluto", "PlutoUI", "interactivity"]
+#> tags = ["module1", "track_julia", "track_material", "Pluto", "PlutoUI", "interactivity"]
 #> layout = "layout.jlhtml"
 
 using Markdown
