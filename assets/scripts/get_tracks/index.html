@@ -1,0 +1,102 @@
+<!DOCTYPE html><pre class="language-julia"><code>if isempty(get(metadata, &quot;tracks&quot;, []))
+    nothing
+else
+    tracks_data = metadata[&quot;tracks&quot;]
+    
+    track_cards = [
+        @htl(&quot;&quot;&quot;
+        &lt;a class=&quot;track-card no-decoration&quot; href=&quot;#&quot; onclick=&quot;selectTrack(&apos;$(track_id)&apos;); return false;&quot; data-track=&quot;$(track_id)&quot;>
+            &lt;h3>$(track_info[&quot;name&quot;])&lt;/h3>
+            &lt;p>$(track_info[&quot;description&quot;])&lt;/p>
+            &lt;span class=&quot;cta&quot;>Choose Track →&lt;/span>
+        &lt;/a>
+        &quot;&quot;&quot;) for (track_id, track_info) in tracks_data
+    ]
+    
+    @htl(&quot;&quot;&quot;
+    &lt;div class=&quot;wide subjectscontainer&quot;>
+      &lt;h1>Choose Your Learning Path&lt;/h1>
+      &lt;div class=&quot;track-selector&quot;>
+      $(track_cards)
+      &lt;div style=&quot;text-align: center; margin-top: 1.5rem;&quot;>
+          &lt;button id=&quot;view-all-btn&quot; onclick=&quot;clearTrackSelection()&quot; style=&quot;display: none; padding: 0.5rem 1.5rem; background: var(--text); color: var(--bg); border: none; border-radius: 0.3rem; cursor: pointer; font-weight: 500;&quot;>View All Modules&lt;/button>
+      &lt;/div>
+      &lt;/div>
+    &lt;/div>
+    
+    &lt;script>
+    (function() {
+        // Track selection state management
+        const STORAGE_KEY = &apos;selectedQuantumTrack&apos;;
+        
+        function selectTrack(trackId) {
+            localStorage.setItem(STORAGE_KEY, trackId);
+            filterSidebarByTrack(trackId);
+            updateTrackUI(trackId);
+        }
+        
+        function clearTrackSelection() {
+            localStorage.removeItem(STORAGE_KEY);
+            location.reload(); // Reload to show all modules
+        }
+        
+        function updateTrackUI(trackId) {
+            // Update track card styling
+            document.querySelectorAll(&apos;.track-card&apos;).forEach(card => {
+                card.classList.remove(&apos;active&apos;);
+            });
+            document.querySelector(&apos;[data-track=&quot;&apos; + trackId + &apos;&quot;]&apos;)?.classList.add(&apos;active&apos;);
+            
+            // Show view all button
+            const viewAllBtn = document.getElementById(&apos;view-all-btn&apos;);
+            if (viewAllBtn) viewAllBtn.style.display = &apos;inline-block&apos;;
+        }
+        
+        function filterSidebarByTrack(trackId) {
+            // Get track module data
+            const trackModuleMap = {
+                &quot;programming&quot;: [&quot;module1&quot;, &quot;module2&quot;, &quot;module3_prog&quot;, &quot;module4_prog&quot;, &quot;module5_prog&quot;, &quot;module6_prog&quot;, &quot;module7_prog&quot;, &quot;module8_prog&quot;],
+                &quot;materials&quot;: [&quot;module1&quot;, &quot;module2&quot;, &quot;module3_mat&quot;, &quot;module4_mat&quot;, &quot;module5_mat&quot;, &quot;module6_mat&quot;, &quot;module7_mat&quot;, &quot;module8_mat&quot;],
+                &quot;medical&quot;: [&quot;module1&quot;, &quot;module2&quot;, &quot;module3_med&quot;, &quot;module4_med&quot;, &quot;module5_med&quot;, &quot;module6_med&quot;, &quot;module7_med&quot;, &quot;module8_med&quot;],
+                &quot;robotics&quot;: [&quot;module1&quot;, &quot;module2&quot;, &quot;module3_robot&quot;, &quot;module4_robot&quot;, &quot;module5_robot&quot;, &quot;module6_robot&quot;, &quot;module7_robot&quot;, &quot;module8_robot&quot;]
+            };
+            
+            const allowedModules = trackModuleMap[trackId] || [];
+            const sidebarItems = document.querySelectorAll(&apos;#pages-sidebar li&apos;);
+            
+            sidebarItems.forEach(item => {
+                // Check if item corresponds to a module
+                const link = item.querySelector(&apos;a&apos;);
+                if (!link) return;
+                
+                const href = link.getAttribute(&apos;href&apos;);
+                let moduleId = null;
+                
+                // Extract module ID from href
+                for (const mod of allowedModules) {
+                    if (href &amp;&amp; href.includes(mod)) {
+                        moduleId = mod;
+                        break;
+                    }
+                }
+                
+                // Show/hide based on track
+                if (moduleId &amp;&amp; allowedModules.includes(moduleId)) {
+                    item.style.display = &apos;block&apos;;
+                } else if (moduleId &amp;&amp; !allowedModules.includes(moduleId)) {
+                    item.style.display = &apos;none&apos;;
+                }
+            });
+        }
+        
+        // Initialize: check if track was previously selected
+        const savedTrack = localStorage.getItem(STORAGE_KEY);
+        if (savedTrack) {
+            updateTrackUI(savedTrack);
+            filterSidebarByTrack(savedTrack);
+        }
+    })();
+    &lt;/script>
+    &quot;&quot;&quot;)
+end
+</code></pre>
