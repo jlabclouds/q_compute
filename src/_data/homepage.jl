@@ -38,27 +38,33 @@ Dict(
     "references" => [
         Dict("name" => "Azure Quantum Ignite",
              "url" => "https://learn.microsoft.com/en-us/azure/quantum/",
-             "description" => md"Microsoft's comprehensive guide to quantum computing on Azure. Learn about quantum hardware access, development tools, and cloud-based quantum simulation."
+             "description" => md"Microsoft's comprehensive guide to quantum computing on Azure. Learn about quantum hardware access, development tools, and cloud-based quantum simulation.",
+             "img" => nothing
         ),
         Dict("name" => "Quantum Katas",
              "url" => "https://quantum.microsoft.com/en-us/tools/quantum-katas",
-             "description" => md"Interactive programming exercises designed to teach quantum computing concepts hands-on. Perfect for reinforcing your understanding through coding practice."
+             "description" => md"Interactive programming exercises designed to teach quantum computing concepts hands-on. Perfect for reinforcing your understanding through coding practice.",
+             "img" => nothing
         ),
         Dict("name" => "Circuit Diagrams",
              "url" => "https://github.com/microsoft/qdk/wiki/Circuit-Diagrams-from-Q%23-Code",
-             "description" => md"Learn how to visualize quantum circuits from Q# code. Essential for understanding circuit representation and gate operations."
+             "description" => md"Learn how to visualize quantum circuits from Q# code. Essential for understanding circuit representation and gate operations.",
+             "img" => nothing
         ),
         Dict("name" => "Algorithm Visualizer",
              "url" => "https://algorithm-visualizer.org/",
-             "description" => md"Visualize classic algorithms step-by-step. Useful for understanding algorithmic foundations that underpin quantum algorithms."
+             "description" => md"Visualize classic algorithms step-by-step. Useful for understanding algorithmic foundations that underpin quantum algorithms.",
+             "img" => nothing
         ),
         Dict("name" => "Materials Science Learning",
              "url" => "https://matsci.org/",
-             "description" => md"Explore materials science principles. Relevant for understanding quantum applications in material simulation and discovery."
+             "description" => md"Explore materials science principles. Relevant for understanding quantum applications in material simulation and discovery.",
+             "img" => nothing
         ),
         Dict("name" => "D-Wave Documentation",
              "url" => "https://docs.dwavequantum.com/en/latest/",
-             "description" => md"Access D-Wave's quantum annealing resources and documentation. Explore an alternative approach to quantum computing using adiabatic quantum computation."
+             "description" => md"Access D-Wave's quantum annealing resources and documentation. Explore an alternative approach to quantum computing using adiabatic quantum computation.",
+             "img" => nothing
         )
     ]
 )
