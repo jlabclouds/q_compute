@@ -38,7 +38,9 @@ Dict(
     "references" => [
         Dict("name" => "Azure Quantum Ignite",
              "url" => "https://learn.microsoft.com/en-us/azure/quantum/",
-             "description" => md"Microsoft's comprehensive guide to quantum computing on Azure. Learn about quantum hardware access, development tools, and cloud-based quantum simulation.",
+             "text" => md"""
+             Microsoft's comprehensive guide to quantum computing on Azure. Learn about quantum hardware access, development tools, and cloud-based quantum simulation.
+             """,
              "img" => nothing
         ),
         Dict("name" => "Quantum Katas",
