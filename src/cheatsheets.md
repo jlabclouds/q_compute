@@ -34,7 +34,7 @@ Essential resources, frameworks, and languages for modern development.
 
 ::: {.row .row-cols-2 .row-cols-md-4 .row-cols-lg-6 .g-4}
 ::: {.col}
-[](https://developer.mozilla.org/en-US/){.card .h-100 .link-card
+[MDN Web Docs](https://developer.mozilla.org/en-US/){.card .h-100 .link-card
 .shadow-sm}
 
 ::: {.card-body}
@@ -48,7 +48,7 @@ documentation.
 :::
 
 ::: {.col}
-[](https://www.w3schools.com){.card .h-100 .link-card .shadow-sm}
+[W3Schools](https://www.w3schools.com){.card .h-100 .link-card .shadow-sm}
 
 ::: {.card-body}
 ![W3Schools](https://www.w3schools.com/favicon-32x32.png){.mb-3}
@@ -60,7 +60,7 @@ Tutorials and references for web development languages and frameworks.
 :::
 
 ::: {.col}
-[](https://it-tools.tech){.card .h-100 .link-card .shadow-sm}
+[IT Tools](https://it-tools.tech){.card .h-100 .link-card .shadow-sm}
 
 ::: {.card-body}
 ![it-tools logo](https://it-tools.tech/favicon-32x32.png){.mb-3}
@@ -73,7 +73,7 @@ more.
 :::
 
 ::: {.col}
-[](https://react.dev/){.card .h-100 .link-card .shadow-sm}
+[React](https://react.dev/){.card .h-100 .link-card .shadow-sm}
 
 ::: {.card-body}
 ![React](https://react.dev/apple-touch-icon.png){.mb-3}
@@ -85,7 +85,7 @@ A JavaScript library for building user interfaces, maintained by Meta.
 :::
 
 ::: {.col}
-[](https://codesandbox.io/p/sandbox/react-new){.card .h-100 .link-card
+[CodeSandbox](https://codesandbox.io/p/sandbox/react-new){.card .h-100 .link-card
 .shadow-sm}
 
 ::: {.card-body}
@@ -98,7 +98,7 @@ Online code editor and prototyping tool for rapid web development.
 :::
 
 ::: {.col}
-[](https://go.dev/){.card .h-100 .link-card .shadow-sm}
+[GoLang](https://go.dev/){.card .h-100 .link-card .shadow-sm}
 
 ::: {.card-body}
 ![GoLang](https://go.dev/images/favicon-gopher-plain.png){.mb-3}
@@ -111,7 +111,7 @@ reliability.
 :::
 
 ::: {.col}
-[](https://fastapi.tiangolo.com/){.card .h-100 .link-card .shadow-sm}
+[FastAPI](https://fastapi.tiangolo.com/){.card .h-100 .link-card .shadow-sm}
 
 ::: {.card-body}
 ![FastAPI](https://fastapi.tiangolo.com/img/favicon.png){.mb-3}
@@ -124,7 +124,7 @@ Python 3.7+.
 :::
 
 ::: {.col}
-[](https://angular.dev/){.card .h-100 .link-card .shadow-sm}
+[Angular](https://angular.dev/){.card .h-100 .link-card .shadow-sm}
 
 ::: {.card-body}
 ![Angular](https://angular.dev/assets/icons/apple-touch-icon.png){.mb-3}
@@ -137,7 +137,7 @@ applications.
 :::
 
 ::: {.col}
-[](https://kotlinlang.org/){.card .h-100 .link-card .shadow-sm}
+[Kotlin](https://kotlinlang.org/){.card .h-100 .link-card .shadow-sm}
 
 ::: {.card-body}
 ![Kotlin](https://kotlinlang.org/assets/images/favicon.svg?v2){.mb-3}
@@ -150,7 +150,7 @@ Native.
 :::
 
 ::: {.col}
-[](https://www.rust-lang.org/learn){.card .h-100 .link-card .shadow-sm}
+[Rust](https://www.rust-lang.org/learn){.card .h-100 .link-card .shadow-sm}
 
 ::: {.card-body}
 ![Rust](https://www.rust-lang.org/static/images/apple-touch-icon.png?v=ngJW8jGAmR){.mb-3}
@@ -162,7 +162,7 @@ A language empowering everyone to build reliable and efficient software.
 :::
 
 ::: {.col}
-[](https://doc.rust-lang.org/cargo/){.card .h-100 .link-card .shadow-sm}
+[Cargo](https://doc.rust-lang.org/cargo/){.card .h-100 .link-card .shadow-sm}
 
 ::: {.card-body}
 ![Cargo](https://doc.rust-lang.org/cargo/favicon-ba9a2803.png){.mb-3}
@@ -175,7 +175,7 @@ projects.
 :::
 
 ::: {.col}
-[](https://www.ruby-lang.org/){.card .h-100 .link-card .shadow-sm}
+[Ruby](https://www.ruby-lang.org/){.card .h-100 .link-card .shadow-sm}
 
 ::: {.card-body}
 ![Ruby](https://www.ruby-lang.org/favicon.ico){.mb-3}
@@ -188,7 +188,7 @@ productivity.
 :::
 
 ::: {.col}
-[](https://www.perl.org/){.card .h-100 .link-card .shadow-sm}
+[Perl](https://www.perl.org/){.card .h-100 .link-card .shadow-sm}
 
 ::: {.card-body}
 ![Perl](https://cdn.perl.org/perlweb/favicon.ico){.mb-3}
@@ -201,7 +201,7 @@ development.
 :::
 
 ::: {.col}
-[](https://www.scala-lang.org/){.card .h-100 .link-card .shadow-sm}
+[Scala](https://www.scala-lang.org/){.card .h-100 .link-card .shadow-sm}
 
 ::: {.card-body}
 ![Scala](https://www.scala-lang.org/resources/apple-touch-icon.png){.mb-3}
@@ -214,7 +214,7 @@ JVM.
 :::
 
 ::: {.col}
-[](https://www.swift.org/){.card .h-100 .link-card .shadow-sm}
+[Swift](https://www.swift.org/){.card .h-100 .link-card .shadow-sm}
 
 ::: {.card-body}
 ![Swift](https://www.swift.org/apple-touch-icon-180x180.png){.mb-3}
@@ -227,7 +227,7 @@ tvOS.
 :::
 
 ::: {.col}
-[](https://www.python.org/){.card .h-100 .link-card .shadow-sm}
+[Python](https://www.python.org/){.card .h-100 .link-card .shadow-sm}
 
 ::: {.card-body}
 ![Python
@@ -241,7 +241,7 @@ resources.
 :::
 
 ::: {.col}
-[](https://jupyter.org/){.card .h-100 .link-card .shadow-sm}
+[Jupyter Notebooks](https://jupyter.org/){.card .h-100 .link-card .shadow-sm}
 
 ::: {.card-body}
 ![Jupyter Notebook Logo](https://jupyter.org/favicon.ico){.mb-3}
@@ -254,7 +254,7 @@ equations, and visualizations.
 :::
 
 ::: {.col}
-[](https://huggingface.co/docs/huggingface_hub/guides/cli){.card .h-100
+[Hugging Face CLI](https://huggingface.co/docs/huggingface_hub/guides/cli){.card .h-100
 .link-card .shadow-sm}
 
 ::: {.card-body}
@@ -269,7 +269,7 @@ Hub.
 :::
 
 ::: {.col}
-[](https://www.tensorflow.org/install){.card .h-100 .link-card
+[TensorFlow](https://www.tensorflow.org/install){.card .h-100 .link-card
 .shadow-sm}
 
 ::: {.card-body}

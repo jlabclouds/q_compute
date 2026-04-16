@@ -1,8 +1,3 @@
-```
-git reset --hard 9ec7b0b
-git push --force-with-lease origin main
-```
-
 # Quantum Computing Learning Course
 
 An extensive, in-depth quantum computing curriculum built with **Julia** and **PlutoPages**, featuring interactive Pluto notebooks, hands-on exercises, and comprehensive coverage from fundamentals to advanced research topics.
