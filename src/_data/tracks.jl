@@ -1,5 +1,4 @@
 [
     "julia" => "💻 Julia programming",
-    "material" => "Material development",
-    "setup" => "Website maintenance"
+    "materials" => "Material development",
 ]
