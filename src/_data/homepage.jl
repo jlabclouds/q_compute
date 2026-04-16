@@ -31,7 +31,15 @@ Dict(
              **Julia is designed with this purpose in mind, use it in your teaching to harness its power.**
              """,
              "img" => "https://user-images.githubusercontent.com/6933510/136203632-29ce0a96-5a34-46ad-a996-de55b3bcd380.png"
-        )
+             ),
+        Dict("name" => "Azure Quantum",
+             "url" => "https://azure.microsoft.com/en-us/services/quantum/",
+             "text" => md"""
+             The future of computing is quantum, and Microsoft Azure Quantum is leading the way in providing access to quantum hardware and software tools.
+             **Use this template to introduce your students to quantum computing concepts and prepare them for the quantum era.**
+             """,
+             "img" => "https://user-images.githubusercontent.com/6933510/168320384-9c8b1e5c-7a3d-4f2e-9b1c-8a0e5a7c6b9c.png"
+             )        
     ],
 
     # References section with complementary resources and learning tools
