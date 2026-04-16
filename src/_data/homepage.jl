@@ -41,12 +41,10 @@ Dict(
              "text" => md"""
              Microsoft's comprehensive guide to quantum computing on Azure. Learn about quantum hardware access, development tools, and cloud-based quantum simulation.
              """,
-             "img" => nothing
         ),
         Dict("name" => "Quantum Katas",
              "url" => "https://quantum.microsoft.com/en-us/tools/quantum-katas",
              "description" => md"Interactive programming exercises designed to teach quantum computing concepts hands-on. Perfect for reinforcing your understanding through coding practice.",
-             "img" => nothing
         ),
         Dict("name" => "Circuit Diagrams",
              "url" => "https://github.com/microsoft/qdk/wiki/Circuit-Diagrams-from-Q%23-Code",
