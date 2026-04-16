@@ -32,14 +32,40 @@
     function getModuleIdFromLink(link) {
         const href = link.getAttribute("href") || ""
         const text = link.textContent || ""
+        const fullText = text.toLowerCase()
 
         // Try to find module ID in href
         for (const track in TRACK_MODULE_MAP) {
             for (const moduleId of TRACK_MODULE_MAP[track]) {
                 if (href.includes(moduleId)) return moduleId
-                if (text.includes(moduleId)) return moduleId
+                // Also match by module folder name (e.g., "mod3_programming")
+                const folderName = "mod" + moduleId.substring(7) // Convert module1_foundations -> mod1_foundations
+                if (href.includes(folderName)) return moduleId
+                if (text.includes(moduleId) || fullText.includes(moduleId)) return moduleId
             }
         }
+
+        // Try to extract module number from text like "Module 1:" or "Module 3: Q#"
+        const moduleMatch = fullText.match(/module\s*(\d+)[:\s_]?(.*)/)
+        if (moduleMatch) {
+            const moduleNumber = moduleMatch[1]
+            const moduleDetail = moduleMatch[2] ? moduleMatch[2].trim() : ""
+
+            // Map based on module number and detail
+            for (const track in TRACK_MODULE_MAP) {
+                for (const moduleId of TRACK_MODULE_MAP[track]) {
+                    const modNum = moduleId.match(/module(\d+)/)[1]
+                    if (modNum === moduleNumber) {
+                        // For modules 1-2, match foundation/gates
+                        if (moduleNumber === "1" && (moduleId.includes("foundations") || moduleId.includes("foundation"))) return moduleId
+                        if (moduleNumber === "2" && (moduleId.includes("gates") || moduleId.includes("gate"))) return moduleId
+                        // For other modules, match by track detail
+                        if (moduleNumber >= "3") return moduleId
+                    }
+                }
+            }
+        }
+
         return null
     }
 
@@ -63,14 +89,30 @@
 
             const moduleId = getModuleIdFromLink(link)
 
-            if (moduleId && !allowedModules.includes(moduleId)) {
-                // Hide modules not in this track
-                item.style.display = "none"
-            } else if (moduleId && allowedModules.includes(moduleId)) {
-                // Show modules in this track
-                item.style.display = ""
+            if (moduleId) {
+                if (allowedModules.includes(moduleId)) {
+                    // Show modules in this track
+                    item.style.display = ""
+                    item.classList.remove("hidden-module")
+                } else {
+                    // Hide modules not in this track
+                    item.style.display = "none"
+                    item.classList.add("hidden-module")
+                }
             }
             // Leave non-module items (headers, etc.) visible
+        })
+
+        // Also hide empty section headers that have no visible children
+        const sections = sidebar.querySelectorAll("li:has(> h3)")
+        sections.forEach((section) => {
+            const listItems = section.querySelectorAll("> ul > li")
+            const visibleCount = Array.from(listItems).filter((item) => item.style.display !== "none").length
+            if (visibleCount === 0) {
+                section.style.display = "none"
+            } else {
+                section.style.display = ""
+            }
         })
     }
 
