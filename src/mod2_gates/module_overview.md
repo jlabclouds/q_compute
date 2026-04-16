@@ -1,13 +1,15 @@
 ---
-title: "Module 2: Quantum Gates"
+title: "Module 2: Quantum Gates & Circuits"
+tags: ["foundations"]
 order: 2
-chapter: 2
-section: 0
-layout: "md.jlmd"
-tags: ["module2", "quantum_gates", "introduction"]
-image: "https://raw.githubusercontent.com/JuliaQuantumComputing/QuantumTutorials.jl/main/assets/quantum_gates_banner.png"
 description: "Learn fundamental quantum gates and their properties"
 ---
+
+# Module 2: Quantum Gates & Circuits
+
+This module covers quantum gates, circuits, and essential quantum operations for all quantum computing tracks.
+
+Topics include:
 
 # Module 2: Quantum Gates
 
