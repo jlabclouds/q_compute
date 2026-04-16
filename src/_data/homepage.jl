@@ -38,13 +38,11 @@ Dict(
     "references" => [
         Dict("name" => "Azure Quantum Ignite",
              "url" => "https://learn.microsoft.com/en-us/azure/quantum/",
-             "text" => md"""
-             Microsoft's comprehensive guide to quantum computing on Azure. Learn about quantum hardware access, development tools, and cloud-based quantum simulation.
-             """,
+             "description" => md"Microsoft's comprehensive guide to quantum computing on Azure. Learn about quantum hardware access, development tools, and cloud-based quantum simulation."
         ),
         Dict("name" => "Quantum Katas",
              "url" => "https://quantum.microsoft.com/en-us/tools/quantum-katas",
-             "description" => md"Interactive programming exercises designed to teach quantum computing concepts hands-on. Perfect for reinforcing your understanding through coding practice.",
+             "description" => md"Interactive programming exercises designed to teach quantum computing concepts hands-on. Perfect for reinforcing your understanding through coding practice."
         ),
         Dict("name" => "Circuit Diagrams",
              "url" => "https://github.com/microsoft/qdk/wiki/Circuit-Diagrams-from-Q%23-Code",
