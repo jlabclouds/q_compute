@@ -1,0 +1,22 @@
+<!DOCTYPE html><pre class="language-julia"><code>if isempty(get(metadata[&quot;homepage&quot;], &quot;references&quot;, []))
+    nothing
+else
+    references = [
+      @htl(&quot;&quot;&quot;
+      &lt;a href=&quot;$(x[&quot;url&quot;])&quot; class=&quot;reference-card&quot; target=&quot;_blank&quot;>
+          &lt;h3>$(x[&quot;name&quot;])&lt;/h3>
+          &lt;p>$(x[&quot;description&quot;])&lt;/p>
+      &lt;/a>
+      &quot;&quot;&quot;) for x in metadata[&quot;homepage&quot;][&quot;references&quot;]
+    ]
+
+    @htl(&quot;&quot;&quot;
+    &lt;div class=&quot;subjectscontainer wide&quot;>
+      &lt;h1>References&lt;/h1>
+      &lt;div class=&quot;references-grid&quot;>
+      $(references)      
+      &lt;/div>
+    &lt;/div>
+    &quot;&quot;&quot;)
+end
+</code></pre>
