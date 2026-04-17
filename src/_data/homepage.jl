@@ -31,22 +31,17 @@ Dict(
              **Julia is designed with this purpose in mind, use it in your teaching to harness its power.**
              """,
              "img" => "https://user-images.githubusercontent.com/6933510/136203632-29ce0a96-5a34-46ad-a996-de55b3bcd380.png"
-             ),
-        Dict("name" => "Azure Quantum",
-             "url" => "https://azure.microsoft.com/en-us/services/quantum/",
-             "text" => md"""
-             The future of computing is quantum, and Microsoft Azure Quantum is leading the way in providing access to quantum hardware and software tools.
-             **Use this template to introduce your students to quantum computing concepts and prepare them for the quantum era.**
-             """,
-             "img" => "https://user-images.githubusercontent.com/6933510/168320384-9c8b1e5c-7a3d-4f2e-9b1c-8a0e5a7c6b9c.png"
-             )        
+             )    
     ],
 
     # References section with complementary resources and learning tools
     "references" => [
         Dict("name" => "Azure Quantum Ignite",
              "url" => "https://learn.microsoft.com/en-us/azure/quantum/",
-             "description" => md"Microsoft's comprehensive guide to quantum computing on Azure. Learn about quantum hardware access, development tools, and cloud-based quantum simulation.",
+             "text" => md"""
+             Microsoft's comprehensive guide to quantum computing on Azure. 
+             Learn about quantum hardware access, development tools, and cloud-based quantum simulation.
+             """,
              "img" => "https://user-images.githubusercontent.com/6933510/168320384-9c8b1e5c-7a3d-4f2e-9b1c-8a0e5a7c6b9c.png"
         ),
         Dict("name" => "Quantum Katas",
@@ -57,22 +52,22 @@ Dict(
         Dict("name" => "Circuit Diagrams",
              "url" => "https://github.com/microsoft/qdk/wiki/Circuit-Diagrams-from-Q%23-Code",
              "description" => md"Learn how to visualize quantum circuits from Q# code. Essential for understanding circuit representation and gate operations.",
-             "img" => nothing
+             "img" => "https://user-images.githubusercontent.com/6933510/168320384-9c8b1e5c-7a3d-4f2e-9b1c-8a0e5a7c6b9c.png"
         ),
         Dict("name" => "Algorithm Visualizer",
              "url" => "https://algorithm-visualizer.org/",
              "description" => md"Visualize classic algorithms step-by-step. Useful for understanding algorithmic foundations that underpin quantum algorithms.",
-             "img" => nothing
+             "img" => "https://user-images.githubusercontent.com/6933510/168320384-9c8b1e5c-7a3d-4f2e-9b1c-8a0e5a7c6b9c.png"
         ),
         Dict("name" => "Materials Science Learning",
              "url" => "https://matsci.org/",
              "description" => md"Explore materials science principles. Relevant for understanding quantum applications in material simulation and discovery.",
-             "img" => nothing
+             "img" => "https://user-images.githubusercontent.com/6933510/168320384-9c8b1e5c-7a3d-4f2e-9b1c-8a0e5a7c6b9c.png"
         ),
         Dict("name" => "D-Wave Documentation",
              "url" => "https://docs.dwavequantum.com/en/latest/",
              "description" => md"Access D-Wave's quantum annealing resources and documentation. Explore an alternative approach to quantum computing using adiabatic quantum computation.",
-             "img" => nothing
+             "img" => "https://user-images.githubusercontent.com/6933510/168320384-9c8b1e5c-7a3d-4f2e-9b1c-8a0e5a7c6b9c.png"
         )
     ]
 )
