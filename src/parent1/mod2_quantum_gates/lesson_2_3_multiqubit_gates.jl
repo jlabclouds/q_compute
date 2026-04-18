@@ -7,7 +7,7 @@
 #> order = 3
 #> image = "https://raw.githubusercontent.com/JuliaQuantumComputing/QuantumTutorials.jl/main/assets/cnot_gates.png"
 #> title = "Multi-Qubit Gates: CNOT & Toffoli"
-#> tags = ["module2", "quantum_gates", "multi_qubit", "entanglement"]
+#> tags = ["parent1_mod2", "quantum_gates", "multi_qubit", "entanglement"]
 #> layout = "layout.jlhtml"
 #> description = "Learn about controlled gates and entanglement"
 

@@ -7,7 +7,7 @@
 #> order = 1
 #> image = "https://raw.githubusercontent.com/JuliaQuantumComputing/QuantumTutorials.jl/main/assets/pauli_gates.png"
 #> title = "Single-Qubit Gates: Pauli Gates"
-#> tags = ["module2", "quantum_gates", "single_qubit", "pauli"]
+#> tags = ["parent1_mod2", "quantum_gates", "single_qubit", "pauli"]
 #> layout = "layout.jlhtml"
 #> description = "Learn about Pauli X, Y, Z gates and their properties"
 

@@ -7,7 +7,7 @@
 #> order = 2
 #> image = "https://raw.githubusercontent.com/JuliaQuantumComputing/QuantumTutorials.jl/main/assets/hadamard_gates.png"
 #> title = "Hadamard and Phase Gates"
-#> tags = ["module2", "quantum_gates", "single_qubit", "hadamard", "phase"]
+#> tags = ["parent1_mod2", "quantum_gates", "single_qubit", "hadamard", "phase"]
 #> layout = "layout.jlhtml"
 #> description = "Master the Hadamard gate and phase gates"
 

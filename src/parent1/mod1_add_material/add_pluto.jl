@@ -7,7 +7,7 @@
 #> order = 2
 #> image = "https://raw.githubusercontent.com/fonsp/Pluto.jl/580ab811f13d565cc81ebfa70ed36c84b125f55d/demo/plutodemo.gif"
 #> title = "Add Pluto notebooks"
-#> tags = ["module1", "track_julia", "track_material", "Pluto", "PlutoUI"]
+#> tags = ["parent1_mod1", "track_julia", "track_material", "Pluto", "PlutoUI"]
 #> layout = "layout.jlhtml"
 
 using Markdown

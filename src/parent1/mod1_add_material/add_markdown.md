@@ -4,7 +4,7 @@ order: 1
 chapter: 1
 section: 1
 layout: "md.jlmd"
-tags: ["module1", "track_material", "markdown", "frontmatter"]
+tags: ["parent1_mod1", "track_material", "markdown", "frontmatter"]
 ---
 
 ## Add markdown files
@@ -31,7 +31,7 @@ order: 1
 chapter: 1
 section: 1
 layout: "md.jlmd"
-tags: ["module2", "track_material", "markdown", "frontmatter"]
+tags: ["parent1_mod1", "track_material", "markdown", "frontmatter"]
 ---
 ```
 

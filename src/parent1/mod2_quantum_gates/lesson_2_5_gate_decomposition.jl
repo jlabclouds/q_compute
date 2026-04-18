@@ -7,7 +7,7 @@
 #> order = 5
 #> image = "https://raw.githubusercontent.com/JuliaQuantumComputing/QuantumTutorials.jl/main/assets/gate_decomposition.png"
 #> title = "Gate Decomposition & Practice"
-#> tags = ["module2", "quantum_gates", "decomposition", "exercises", "projects"]
+#> tags = ["parent1_mod2", "quantum_gates", "decomposition", "exercises", "projects"]
 #> layout = "layout.jlhtml"
 #> description = "Exercises and projects on gate decomposition"
 

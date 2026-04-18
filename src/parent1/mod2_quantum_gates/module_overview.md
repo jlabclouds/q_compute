@@ -4,7 +4,7 @@ order: 2
 chapter: 2
 section: 0
 layout: "md.jlmd"
-tags: ["module2", "quantum_gates", "introduction"]
+tags: ["parent1_mod2", "quantum_gates", "introduction"]
 image: "https://raw.githubusercontent.com/JuliaQuantumComputing/QuantumTutorials.jl/main/assets/quantum_gates_banner.png"
 description: "Learn fundamental quantum gates and their properties"
 ---

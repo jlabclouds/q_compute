@@ -105,12 +105,10 @@ $(pluto_head)
             </li>
         $(let
             sections = metadata["sidebar"]
-            [
-                @htl("""
-                <li>
-                <h3>$(section_name)</h3>
-                <ul>
-                $([
+            
+            function render_page_items(section_id)
+                # Get pages for this section
+                return [
                     let
                         input = other_page.input
                         output = other_page.output
@@ -138,10 +136,43 @@ $(pluto_head)
                             @htl("""<li class=$(class)><a href=$(href) title=$(desc)><span class="entry-number">Homework $(homework_number):</span> $(name)</a></li>""")
                         end
                     end for other_page in get(collections, section_id, (pages=[],)).pages
-                ])
-                </ul>
-                </li>
-                """)
+                ]
+            end
+            
+            [
+                if isa(section_name, AbstractDict) || isa(section_name, AbstractVector)
+                    # This is a dropdown section
+                    subsections = section_name isa AbstractDict ? section_name : section_name
+                    @htl("""
+                    <li class="dropdown-section">
+                    <h3 class="dropdown-toggle">$(section_id)</h3>
+                    <ul class="dropdown-content">
+                    $([
+                        @htl("""
+                        <li class="dropdown-group">
+                        <h4>$(subsection_name)</h4>
+                        <ul>
+                        $(render_page_items(subsection_id))
+                        </ul>
+                        </li>
+                        """)
+                        for (subsection_id, subsection_name) in (subsections isa AbstractDict ? subsections : 
+                            [(subsections[i], subsections[i]) for i in 1:length(subsections)])
+                    ])
+                    </ul>
+                    </li>
+                    """)
+                else
+                    # This is a regular section with pages
+                    @htl("""
+                    <li>
+                    <h3>$(section_name)</h3>
+                    <ul>
+                    $(render_page_items(section_id))
+                    </ul>
+                    </li>
+                    """)
+                end
                 for (section_id, section_name) in sections
             ]
         end)

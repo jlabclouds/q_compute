@@ -7,7 +7,7 @@
 #> order = "3"
 #> section = "3"
 #> title = "PlutoUI showcase"
-#> tags = ["module1", "track_julia", "track_material", "Pluto", "PlutoUI", "interactivity"]
+#> tags = ["parent1_mod1", "track_julia", "track_material", "Pluto", "PlutoUI", "interactivity"]
 #> layout = "layout.jlhtml"
 
 using Markdown

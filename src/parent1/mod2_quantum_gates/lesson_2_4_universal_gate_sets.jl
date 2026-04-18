@@ -7,7 +7,7 @@
 #> order = 4
 #> image = "https://raw.githubusercontent.com/JuliaQuantumComputing/QuantumTutorials.jl/main/assets/universal_gates.png"
 #> title = "Universal Gate Sets"
-#> tags = ["module2", "quantum_gates", "universality", "completeness"]
+#> tags = ["parent1_mod2", "quantum_gates", "universality", "completeness"]
 #> layout = "layout.jlhtml"
 #> description = "Understand quantum gate universality and completeness"
 
