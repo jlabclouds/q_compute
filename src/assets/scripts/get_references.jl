@@ -5,7 +5,8 @@ else
       let
           image = get(x, "img", nothing)
           class = "no-decoration"
-          title = x["description"] |> string
+          desc = get(x, "description", get(x, "text", ""))
+          title = desc |> string
           
           image === nothing || isempty(image) ? nothing : @htl("""<a title=$(title) class=$(class) href=$(x["url"]) target="_blank">
               <h3>$(x["name"])</h3>
