@@ -330,6 +330,7 @@ main {
     padding: var(--child-padding);
     border-radius: var(--border-radius);
     transition: background-color 0.2s ease;
+    margin-block-start: 0 !important;
 }
 
 #pages-sidebar h3.dropdown-toggle:hover {
