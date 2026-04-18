@@ -352,6 +352,7 @@ main {
 
 #pages-sidebar li.dropdown-section.collapsed ul.dropdown-content {
     max-height: 0;
+    overflow: hidden;
 }
 
 #pages-sidebar li.dropdown-group {
