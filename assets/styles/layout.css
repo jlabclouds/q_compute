@@ -310,11 +310,15 @@ main {
 /* DROPDOWN SECTIONS */
 
 #pages-sidebar li.dropdown-section {
-    margin-block-start: 3rem;
+    margin-block-start: 1.5rem;
 }
 
 #pages-sidebar li.dropdown-section:first-of-type {
     margin-block-start: 0;
+}
+
+#pages-sidebar li.dropdown-section.collapsed {
+    margin-block-start: 1rem;
 }
 
 #pages-sidebar h3.dropdown-toggle {
