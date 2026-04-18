@@ -365,3 +365,14 @@ main {
     margin-block-end: 0;
     padding: var(--child-padding);
 }
+
+#pages-sidebar li.dropdown-group > ul {
+    padding-left: 1em;
+}
+
+#pages-sidebar li.dropdown-group li a {
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
