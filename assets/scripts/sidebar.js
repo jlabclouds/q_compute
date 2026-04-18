@@ -14,6 +14,31 @@ window.addEventListener("click", function (e) {
     }
 })
 
+// Dropdown toggle functionality
+document.querySelectorAll("h3.dropdown-toggle").forEach((toggle) => {
+    toggle.addEventListener("click", function (e) {
+        e.preventDefault()
+        const section = this.closest("li.dropdown-section")
+        section.classList.toggle("collapsed")
+
+        // Save dropdown state to localStorage
+        const sectionId = this.textContent.trim()
+        const isCollapsed = section.classList.contains("collapsed")
+        const dropdownStates = JSON.parse(localStorage.getItem("dropdown_states") || "{}")
+        dropdownStates[sectionId] = isCollapsed
+        localStorage.setItem("dropdown_states", JSON.stringify(dropdownStates))
+    })
+})
+
+// Restore dropdown states from localStorage
+const dropdownStates = JSON.parse(localStorage.getItem("dropdown_states") || "{}")
+document.querySelectorAll("h3.dropdown-toggle").forEach((toggle) => {
+    const sectionId = toggle.textContent.trim()
+    if (dropdownStates[sectionId]) {
+        toggle.closest("li.dropdown-section").classList.add("collapsed")
+    }
+})
+
 document.querySelectorAll(".track-chooser select").forEach((trackSelect) => {
     const ontrack = () => {
         let track = trackSelect.value

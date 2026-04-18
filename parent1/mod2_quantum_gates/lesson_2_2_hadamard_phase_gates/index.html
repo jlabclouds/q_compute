@@ -1,21 +1,21 @@
 <!DOCTYPE html><html lang="en">
 <head>
 
-<title>Class logistics — Quantum Computing Learning Course </title>
+<title>Hadamard and Phase Gates — Quantum Computing Learning Course </title>
+<meta name="description" content='Master the Hadamard gate and phase gates' />
 
+<link rel="root" href="../../.." />
 
-<link rel="root" href=".." />
+<link rel="icon" href="../../../assets/favicon.ico" />
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
 
-<link rel="icon" href="../assets/favicon.ico" />
-<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../../assets/styles/index.css" type="text/css" />
+<link rel="stylesheet" href="../../../assets/styles/layout.css" type="text/css" />
+<script src="../../../assets/scripts/sidebar.js" type="module"></script>
 
-<link rel="stylesheet" href="../assets/styles/index.css" type="text/css" />
-<link rel="stylesheet" href="../assets/styles/layout.css" type="text/css" />
-<script src="../assets/scripts/sidebar.js" type="module"></script>
-
-<link rel="pp-search-data" href="../pp_search_data.json" />
+<link rel="pp-search-data" href="../../../pp_search_data.json" />
 <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js" integrity="sha256-DFDZACuFeAqEKv/7Vnu1Tt5ALa58bcWZegGGFNgET8g=" crossorigin="anonymous" defer></script>
-<script src="../assets/scripts/search.js" type="module" defer></script>
+<script src="../../../assets/scripts/search.js" type="module" defer></script>
 
 <script src="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.3.0/src/lite-yt-embed.js" integrity="sha256-sDRYYtDc+jNi2rrJPUS5kGxXXMlmnOSCq5ek5tYAk/M=" crossorigin="anonymous" defer></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.3.0/src/lite-yt-embed.css" integrity="sha256-lv6SEl7Dhri7d86yiHCTuSWFb9CYROQFewxZ7Je0n5k=" crossorigin="anonymous">
@@ -87,7 +87,7 @@ window.pluto_recording_audio_url = undefined;
         <ul>
             <li class="sidebar-about">
                 <div class="course-title">
-                    <h1><a href=".."><span>Quantum Computing Learning Course</span></a></h1>
+                    <h1><a href="../../.."><span>Quantum Computing Learning Course</span></a></h1>
                     <h2><span>From Foundations to Research Frontiers</span></h2>
                 </div>
                 <div class="authors">
@@ -96,7 +96,7 @@ window.pluto_recording_audio_url = undefined;
             </li>
             <li>
                 <div class="search-bar">
-                    <form action="../search" method="GET">
+                    <form action="../../../search" method="GET">
                         <input type="search" name="q" placeholder="Search...">
                         <input type=submit value="🔎">
                     </form>
@@ -116,7 +116,7 @@ window.pluto_recording_audio_url = undefined;
         <li>
 <h3>Welcome</h3>
 <ul>
-<li class='active lecture tag_welcome'><a href='../logistics/'><span class="entry-number"></span> Class logistics</a></li><li class=' lecture tag_welcome'><a href='../installation/'><span class="entry-number"></span> Software installation</a></li><li class=' lecture tag_welcome'><a href='../cheatsheets/'><span class="entry-number"></span> Cheatsheets</a></li>
+<li class=' lecture tag_welcome'><a href='../../../logistics/'><span class="entry-number"></span> Class logistics</a></li><li class=' lecture tag_welcome'><a href='../../../installation/'><span class="entry-number"></span> Software installation</a></li><li class=' lecture tag_welcome'><a href='../../../cheatsheets/'><span class="entry-number"></span> Cheatsheets</a></li>
 </ul>
 </li>
 <li class="dropdown-section">
@@ -159,16 +159,16 @@ window.pluto_recording_audio_url = undefined;
                 <li><hr></li>
             <li class="sidebar-about">
                 <div class="semester-details">
-                    <a href="../semesters/">Self-paced, 2024-2025</a>
+                    <a href="../../../semesters/">Self-paced, 2024-2025</a>
                     <div class="course-numbers"><span>QUANTCOMP-101</span></div>
                 </div>
                 <div class="logos">
                     <picture title="Quantum Learning Initiative">
-                        <img src="../assets/quantum_logo.svg">
+                        <img src="../../../assets/quantum_logo.svg">
                     </picture>
                     <picture title="Julia Programming Language">
-                        <source srcset="../assets/julia-logo-dark.svg" media="(prefers-color-scheme: dark)" />
-                        <img src="../assets/julia-logo-color.svg">
+                        <source srcset="../../../assets/julia-logo-dark.svg" media="(prefers-color-scheme: dark)" />
+                        <img src="../../../assets/julia-logo-color.svg">
                     </picture>
                 </div>
             </li>
@@ -177,37 +177,18 @@ window.pluto_recording_audio_url = undefined;
         </nav>
         <div id="pages-content">
            <div class="lecture-header" >
-    
-    <h1>Class logistics</h1>
+    <p class="number">Section 2.2</p>
+    <h1>Hadamard and Phase Gates</h1>
     
     
 </div>
-        <div class="pages-markdown">
-<main>
-<style>
-main a img {
-    width: 5rem;
-    margin: 1rem;
-}
-</style>
-<h1 id="course-logistics"><a href="#course-logistics" class="anchor"></a>Course logistics</h1>
-<p>Describe here the logistics of your class.</p>
-<h2 id="sites"><a href="#sites" class="anchor"></a>Sites</h2>
-<ol>
-<li><a href="https://azure.microsoft.com/en-us/services/quantum/">Azure Quantum</a></li>
-<li><a href="https://jupyter.org/hub">Jupyter Hub</a></li>
-<li><a href="https://juliaai.github.io/MLJ.jl/stable/">MLJ: Machine Learning Framework for Julia</a></li>
-<li></li>
-</ol>
-<h2 id="textbooks"><a href="#textbooks" class="anchor"></a>Textbooks:</h2>
-<p>The following textbooks provide resource material for this course:</p>
-<ol>
-<li><a href="https://web1.eng.famu.fsu.edu/~dommelen/quantum/pdf/index.pdf">Quantum Mechanics for Engineers</a></li>
-<li><a href="https://github.com/guttag/Intro-to-Computation-and-Programming/tree/main">Introduction to Computation and Programming Using Python: With Application to Understanding Data</a> Guttag, John. 2nd ed. MIT Press, 2016. ISBN: 9780262529624.</li>
-</ol>
-<h2 id="section"><a href="#section" class="anchor"></a></h2>
-</main>
-</div>
+        <pluto-editor 
+ statefile='../../../generated_assets/lesson_2_2_hadamard_phase_gates_752613f0.plutostate' 
+ notebookfile='../../../generated_assets/lesson_2_2_hadamard_phase_gates_a0def5b1.jl' 
+
+
+	disable_ui
+></pluto-editor>
 
         <div class="page-foot">
             <div class="copyright">
