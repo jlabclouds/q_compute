@@ -33,7 +33,9 @@ a {
     background-size: 2px 8px;
     background-image: linear-gradient(to bottom, rgba(165, 213, 235, 0.3) 33%, rgba(165, 213, 235, 0.3));
     /* text-shadow: 2px 2px white, 2px -2px white, -2px 2px white, -2px -2px white; */
-    transition: background-position 50ms linear, background-size 50ms linear;
+    transition:
+        background-position 50ms linear,
+        background-size 50ms linear;
 }
 
 a:hover {
@@ -297,4 +299,152 @@ section > div.preview > img {
 .homepage,
 .banner {
     color: #3c3c3c;
+}
+
+/* HIGHLIGHTS JUMBOTRON & CAROUSEL */
+
+.highlights-jumbotron {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 3rem 2rem;
+    margin: 2rem 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.carousel-wrapper {
+    overflow: hidden;
+    border-radius: 0.3rem;
+    background: white;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    gap: 2rem;
+    align-items: center;
+}
+
+.carousel-slide .content {
+    flex: 1;
+    color: #333;
+}
+
+.carousel-slide .content h2 {
+    margin-top: 0;
+    color: #667eea;
+    font-size: 1.8rem;
+}
+
+.carousel-slide .content p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.carousel-slide .preview {
+    flex: 0 0 40%;
+}
+
+.carousel-slide .preview img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.3rem;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(102, 126, 234, 0.8);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    padding: 1rem 0.8rem;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(102, 126, 234, 1);
+}
+
+.carousel-btn.prev {
+    left: -3rem;
+}
+
+.carousel-btn.next {
+    right: -3rem;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.carousel-dots .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #667eea;
+    background-color: transparent;
+    cursor: pointer;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.carousel-dots .dot.active {
+    background-color: #667eea;
+    transform: scale(1.2);
+}
+
+.carousel-dots .dot:hover {
+    background-color: #667eea;
+}
+
+@media (max-width: 768px) {
+    .carousel-slide {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .carousel-slide .preview {
+        flex: 0 0 100%;
+    }
+
+    .carousel-btn {
+        position: relative;
+        top: auto;
+        transform: none;
+    }
+
+    .carousel-btn.prev,
+    .carousel-btn.next {
+        left: auto;
+        right: auto;
+    }
+
+    .carousel-dots {
+        order: 3;
+    }
+
+    .highlights-jumbotron {
+        padding: 1.5rem 1rem;
+    }
 }
