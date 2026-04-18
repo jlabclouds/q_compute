@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="./assets/styles/index.css" type="text/css" />
 <link rel="stylesheet" href="./assets/styles/layout.css" type="text/css" />
 <script src="./assets/scripts/sidebar.js" type="module"></script>
+<script src="./assets/scripts/carousel.js" defer></script>
 
 <link rel="pp-search-data" href="./pp_search_data.json" />
 <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js" integrity="sha256-DFDZACuFeAqEKv/7Vnu1Tt5ALa58bcWZegGGFNgET8g=" crossorigin="anonymous" defer></script>
@@ -182,10 +183,11 @@ window.pluto_recording_audio_url = undefined;
     <h1>Computational thinking <strong>website template</strong></h1>
 </div>
 <main class="homepage">
-<div class="subjectscontainer wide">
-  <h1>Highlights</h1>
-  <div class="contain">
-  <section>
+<div class="highlights-jumbotron">
+  <div class="carousel-container">
+    <div class="carousel-wrapper">
+      <div class="carousel-track">
+        <section class="carousel-slide">
 <div class="content">
     <h2>Easy to customise</h2>
     <p><div class="markdown"><p>Let the template automate all of the website development and infrastructure, so that you can focus on the most important thing:              <strong>easily develop your lesson materials&#33;</strong></p>
@@ -195,7 +197,7 @@ window.pluto_recording_audio_url = undefined;
     <img src="https://user-images.githubusercontent.com/6933510/168320383-a401459b-97f5-41df-bc7b-ebe76e4886cc.png">
 </div>
 </section>
-<section>
+<section class="carousel-slide">
 <div class="content">
     <h2>Revolutionary interactivity with Pluto.jl</h2>
     <p><div class="markdown"><p>Thanks to Pluto.jl, the website is built using real code, and instead of a book, we have a series of interactive notebooks. <strong>On the website, students can play with sliders, buttons and images to interact with our simulations.</strong> You can even go further, and modify and run any code on our website&#33;</p>
@@ -205,7 +207,7 @@ window.pluto_recording_audio_url = undefined;
     <img src="https://user-images.githubusercontent.com/6933510/136196607-16207911-53be-4abb-b90e-d46c946e6aaf.gif">
 </div>
 </section>
-<section>
+<section class="carousel-slide">
 <div class="content">
     <h2>Learn Julia</h2>
     <p><div class="markdown"><p>In literature it&#39;s not enough to just know the technicalities of grammar. In music it&#39;s not enough to learn the scales. The goal is to communicate experiences and emotions. For a computer scientist, it&#39;s not enough to write a working program, the program should be written with beautiful high level abstractions that speak to your audience. <strong>Julia is designed with this purpose in mind, use it in your teaching to harness its power.</strong></p>
@@ -215,6 +217,16 @@ window.pluto_recording_audio_url = undefined;
     <img src="https://user-images.githubusercontent.com/6933510/136203632-29ce0a96-5a34-46ad-a996-de55b3bcd380.png">
 </div>
 </section>
+<pre><code>  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;button class=&quot;carousel-btn prev&quot; aria-label=&quot;Previous slide&quot;&gt;&amp;#10094;&lt;/button&gt;
+&lt;button class=&quot;carousel-btn next&quot; aria-label=&quot;Next slide&quot;&gt;&amp;#10095;&lt;/button&gt;
+
+&lt;div class=&quot;carousel-dots&quot;&gt;
+  &lt;button class=&quot;dot active&quot; data-slide=&quot;0&quot; aria-label=&quot;Go to slide 1&quot;&gt;&lt;/button&gt;&lt;button class=&quot;dot &quot; data-slide=&quot;1&quot; aria-label=&quot;Go to slide 2&quot;&gt;&lt;/button&gt;&lt;button class=&quot;dot &quot; data-slide=&quot;2&quot; aria-label=&quot;Go to slide 3&quot;&gt;&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
   </div>
 </div>
 <div class="wide subjectscontainer">
